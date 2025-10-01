@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Inici - Línia del Temps</title>
+</head>
+<body>
+    <header class="hero-header">
+        <h1>Edat Mitjana</h1>
+        <p>La línia del temps definitiva</p>
+    </header>
+
+    <section class="map-section">
+        <img src="images/Adobe Express - file (1).png" alt="Mapa de la Línia del Temps de l'Edat Mitjana" id="rotating-image">
+    </section>
+
+    <section class="content-section">
+        <div class="image-container">
+            <img src="images/view-ancient-roman-empire-colosseum.jpg" alt="Imatge relacionada amb la caiguda de l'Imperi Romà">
+        </div>
+        <div class="text-container">
+            <h2>Començament de l'Edat Mitjana</h2>
+            <p>L'any 476 d.C., l'Imperi Romà va arribar a la seva fi. En aquell any va començar una nova etapa, l'Edat Mitjana.</p>
+        </div>
+    </section>
+    
+    <section class="small-text-section">
+        <div class="text-container">
+            <h2>Una nova etapa - Segle V - XV</h2>
+        </div>
+    </section>
+    
+    <section class="small-image-section">
+        <div class="image-container">
+            <img src="images/Santa-sofia.jpg" alt="Imatge de Santa Sofia">
+        </div>
+        <div class="text-container">
+            <h2>Santa Sofia de Constantinoble - 537</h2>
+            <p>Santa Sofia de Constantinoble és una església cristiana ortodoxa construïda entre el 532 i el 537 pels romans d'Orient, a l'actual Turquia. Va ser convertida en una mesquita i posteriorment en un museu.</p>
+        </div>
+    </section>
+    
+    <section class="small-image-section reversed">
+        <div class="image-container">
+            <img src="images/History-of-Islam.jpg" alt="Imatge relacionada amb la fundació de l'Islam">
+        </div>
+        <div class="text-container">
+            <h2>Una nova religió, l'Islam - 622</h2>
+            <p>L'any 622, el profeta Mahoma o Muhammad (S.A.W.) va fundar l'Islam i es va expandir per la península Aràbiga.</p>
+        </div>
+    </section>
+
+    <section class="small-image-section">
+        <div class="text-container">
+            <h2>Castell de Cardona - 886</h2>
+            <p>El Castell de Cardona és una fortalesa construïda entre el 880 i el 886.</p>
+        </div>
+    </section>
+    
+    <section class="small-image-section">
+        <div class="image-container">
+            <img src="images/castell-de-loarre.jpeg" alt="Imatge del Castell de Loarre">
+        </div>
+        <div class="text-container">
+            <h2>Castell de Loarre - 1020</h2>
+            <p>És un castell romànic que va ser un lloc estratègic per als musulmans, ja que controlaven les riques terres agrícoles de la plana. </p>
+        </div>
+    </section>
+
+    <section class="small-image-section reversed">
+        <div class="text-container">
+            <h2>Santa Maria de Taüll - 1123</h2>
+            <p>És una església romànica construïda l'any 1123.</p>
+        </div>
+    </section>
+
+    <section class="small-image-section">
+        <div class="image-container">
+            <img src="images/348115-Barcelona-Cathedral.webp" alt="Imatge de la Catedral de Barcelona">
+        </div>
+        <div class="text-container">
+            <h2>Catedral de Barcelona - 1298</h2>
+            <p>La Catedral de Barcelona és una basílica gòtica que es va construir durant els segles XIII i XV.</p>
+        </div>
+    </section>
+
+    <section class="small-image-section reversed">
+        <div class="image-container">
+            <img src="images/captura-de-pantalla-2017-04-18-a-las-00-20-05.png" alt="Imatge relacionada amb la Guerra dels 100 anys">
+        </div>
+        <div class="text-container">
+            <h2>La Guerra dels 100 Anys - 1337</h2>
+            <p>És un conflicte entre el Regne d'Anglaterra i el de França que va durar entre el 1337 i el 1453. De fet, va durar 116 anys.</p>
+        </div>
+    </section>
+
+    <section class="small-image-section">
+        <div class="image-container">
+            <img src="images/peste-negra.jpeg" alt="Imatge relacionada amb la Pesta Negra">
+        </div>
+        <div class="text-container">
+            <h2>La Pesta Negra - 1346</h2>
+            <p>La Pesta Negra és una pandèmia originada al nord de la Xina que va arribar a Europa i va matar un terç de la seva població.</p>
+        </div>
+    </section>
+
+    <section class="content-section reversed">
+        <div class="image-container">
+            <img src="images/Desembarco_de_Colón_de_Dióscoro_Puebla.jpg" alt="Imatge relacionada amb el descobriment d'Amèrica">
+        </div>
+        <div class="text-container">
+            <h2>Final de l'Edat Mitjana</h2>
+            <p>A finals del segle XV, Colom va arribar i va descobrir Amèrica l'any 1492. En aquell any va acabar l'Edat Mitjana i va començar una nova etapa.</p>
+        </div>
+    </section>
+    <script>
+        const rotatingImage = document.getElementById('rotating-image');
+    
+        window.addEventListener('scroll', () => {
+            const maxRotation = 35;
+    
+            const scrollDistance = 1000;
+    
+            let scrollPosition = window.scrollY;
+    
+            let rotationAngle = (scrollPosition / scrollDistance) * maxRotation;
+    
+            if (rotationAngle > maxRotation) {
+                rotationAngle = maxRotation;
+            }
+
+            rotatingImage.style.transform = `rotate(${rotationAngle}deg)`;
+        });
+    </script>
+</html>
